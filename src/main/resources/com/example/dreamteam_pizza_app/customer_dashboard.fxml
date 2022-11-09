@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dreamteam_pizza_app.CustomerDashboardController">
+   <children>
+      <BorderPane prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #8C1D40;">
+         <left>
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="97.0" text="Order Status:" textFill="WHITE" translateX="50.0" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </left>
+         <right>
+            <Button fx:id="button_customer" mnemonicParsing="false" style="-fx-background-color: #FFC627; -fx-translate-x: -10;" text="Customer" BorderPane.alignment="CENTER"  />
+         </right>
+         <center>
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="text_status" prefHeight="25.0" prefWidth="80.0" text="STATUS" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <ProgressBar fx:id="progressbar_status" prefHeight="9.0" prefWidth="200.0" progress="0.27" />
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+      <HBox prefHeight="357.0" prefWidth="600.0">
+         <children>
+            <VBox prefHeight="356.0" prefWidth="381.0">
+               <children>
+                  <HBox prefHeight="197.0" prefWidth="381.0">
+                     <children>
+                        <Pane prefHeight="197.0" prefWidth="127.0">
+                           <children>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="154.0" layoutX="11.0" layoutY="35.0" stroke="BLACK" strokeDashOffset="30.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="20.0"  width="108.0" />
+                              <RadioButton fx:id="rbutton_pepperoni" contentDisplay="TOP" layoutX="89.0" layoutY="155.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="11.0" />
+                              <Label layoutX="34.0" layoutY="136.0" text="Pepperoni">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="87.0" fitWidth="76.0" layoutX="26.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/pizza.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="197.0" prefWidth="129.0">
+                           <children>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="154.0" layoutX="8.0" layoutY="35.0" stroke="BLACK" strokeDashOffset="30.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="20.0" width="108.0" />
+                              <RadioButton fx:id="rbutton_Vegetable" contentDisplay="TOP" layoutX="91.0" layoutY="155.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="11.0" />
+                              <Label layoutX="31.0" layoutY="136.0" text="Vegetable">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="87.0" fitWidth="76.0" layoutX="26.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/pizza.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="137.0" layoutY="10.0" prefHeight="197.0" prefWidth="129.0">
+                           <children>
+                              <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="154.0" layoutX="8.0" layoutY="35.0" stroke="BLACK" strokeDashOffset="30.0" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeMiterLimit="20.0"  width="108.0" />
+                              <RadioButton fx:id="rbutton_cheese" contentDisplay="TOP" layoutX="91.0" layoutY="155.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="11.0" />
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="41.0" layoutY="139.0" text="Cheese">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="87.0" fitWidth="76.0" layoutX="26.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@/pizza.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <Label text="Toppings" translateX="20.0">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="26.0" prefWidth="381.0" translateY="5.0">
+                     <children>
+                        <CheckBox fx:id="checkbox_mushroom" mnemonicParsing="false" text="Mushroom" translateX="20.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox_olives" alignment="CENTER" mnemonicParsing="false" text="Olives" translateX="40.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="235.0" prefHeight="26.0" prefWidth="381.0" translateY="10.0">
+                     <children>
+                        <CheckBox fx:id="checkbox_onion" mnemonicParsing="false" text="Onion" translateX="20.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checkbox_extra_cheese" alignment="CENTER" mnemonicParsing="false" text="Extra Cheese" translateX="76.0">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </HBox>
+                  <Button fx:id="button_add_to_order" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="10.0" prefWidth="314.0" style="-fx-background-color: #FFC627; -fx-border-color: black; -fx-border-radius: 5; -fx-background-radius: 5;" text="Add to Order" translateX="30.0" translateY="30.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane prefHeight="356.0" prefWidth="219.0">
+               <children>
+                  <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="307.0" layoutX="14.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="191.0" />
+                  <VBox layoutX="19.0" layoutY="32.0" prefHeight="294.0" prefWidth="180.0">
+                     <children>
+                        <TextArea fx:id="textarea_order" prefHeight="100.0" prefWidth="148.0" scaleX="0.9" translateY="10.0" />
+                        <Pane prefHeight="27.0" prefWidth="180.0" translateY="20.0">
+                           <children>
+                              <TextField fx:id="textfield_asurite" prefHeight="19.0" prefWidth="180.0" promptText="ASURITE" scaleX="0.9">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <HBox prefHeight="28.0" prefWidth="180.0" translateY="25.0">
+                           <children>
+                              <ComboBox fx:id="combobox_time" prefHeight="31.0" prefWidth="79.0" promptText="TIme" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5;" />
+                              <ComboBox fx:id="combobox_ampm" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="94.0" promptText="AM/PM" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5;" translateX="5.0" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="button_placeorder" alignment="CENTER" mnemonicParsing="false" prefHeight="29.0" prefWidth="167.0" style="-fx-background-color: #FFC627; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: black;" text="Place Order" translateX="7.0" translateY="40.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Button>
+                        <Label text="Enter ASURITE ID to check order status" translateY="50.0">
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="12.0" prefWidth="180.0" translateY="50.0">
+                           <children>
+                              <TextField fx:id="textfield_asurite_status" prefHeight="20.0" prefWidth="96.0" />
+                              <Button fx:id="button_status" alignment="CENTER_RIGHT" mnemonicParsing="false" style="-fx-background-color: #FFC627; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: black;" text="Status" translateX="5.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>
