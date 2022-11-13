@@ -146,7 +146,7 @@
                         </Pane>
                         <HBox prefHeight="28.0" prefWidth="180.0" translateY="25.0">
                            <children>
-                              <ComboBox fx:id="combobox_time" prefHeight="31.0" prefWidth="79.0" promptText="TIme" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5;" />
+                              <ComboBox fx:id="combobox_time" prefHeight="31.0" prefWidth="79.0" promptText="Time" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5;" />
                               <ComboBox fx:id="combobox_ampm" layoutX="10.0" layoutY="10.0" prefHeight="31.0" prefWidth="94.0" promptText="AM/PM" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 5;" translateX="5.0" />
                            </children>
                         </HBox>
