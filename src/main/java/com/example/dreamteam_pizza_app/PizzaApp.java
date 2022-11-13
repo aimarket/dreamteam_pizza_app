@@ -134,7 +134,7 @@ public class PizzaApp extends Application {
                     PizzaOrder pizzaOrder = new PizzaOrder(currentPizzaType, toppings, (String) customerController.combobox_time.getValue(), (String) customerController.combobox_ampm.getValue());
                     customer.addPizzaOrder(pizzaOrder);
                     customerController.textarea_order.setText("Order Placed has been placed for " + enteredID + ".");
-                    updateOrderHistory(cheffController, "ORDER ACCEPTED: " + enteredID + " " + customerController.combobox_time.getValue() + " - " + customerController.combobox_ampm.getValue());
+                    updateOrderHistory(cheffController, "ORDER ACCEPTED: " + enteredID + " - " + customerController.combobox_time.getValue() + " " + customerController.combobox_ampm.getValue());
                     refreshOrderList(cheffController);
                 } else {
                     customerController.textarea_order.setText("ASURITE ID is invalid");
@@ -144,7 +144,7 @@ public class PizzaApp extends Application {
                 PizzaOrder pizzaOrder = new PizzaOrder(currentPizzaType, toppings, (String) customerController.combobox_time.getValue(), (String) customerController.combobox_ampm.getValue());
                 customerList.get(existingCustomerMatchingPosition).addPizzaOrder(pizzaOrder);
                 customerController.textarea_order.setText("Order Placed has been placed for " + enteredID + ".");
-                updateOrderHistory(cheffController, "ORDER ACCEPTED: " + enteredID + " " + customerController.combobox_time.getValue() + " - " + customerController.combobox_ampm.getValue());
+                updateOrderHistory(cheffController, "ORDER ACCEPTED: " + enteredID + " - " + customerController.combobox_time.getValue() + " " + customerController.combobox_ampm.getValue());
                 refreshOrderList(cheffController);
             }
         });
