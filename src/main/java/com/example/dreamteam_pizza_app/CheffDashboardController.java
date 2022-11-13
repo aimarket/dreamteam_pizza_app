@@ -6,6 +6,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 public class CheffDashboardController {
     @FXML
@@ -16,6 +17,9 @@ public class CheffDashboardController {
 
     @FXML
     public Pane pane_pizza_order;
+
+    @FXML
+    public VBox vbox_pizza_orders;
 
     @FXML
     public Label label_order_status;
