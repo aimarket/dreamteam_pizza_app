@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="657a3db0-01a7-415b-832e-c8ac85de4895" name="Changes" comment="initial commit to github">
+    <list default="true" id="657a3db0-01a7-415b-832e-c8ac85de4895" name="Changes" comment="Added customer page base functionality.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CustomerDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CustomerDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CheffDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CheffDashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dreamteam_pizza_app/customer_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dreamteam_pizza_app/customer_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dreamteam_pizza_app/cheff_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dreamteam_pizza_app/cheff_dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +27,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="CustomerInteractions" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667666598032</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added customer page base functionality.">
+      <created>1668242876195</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668242876196</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -101,7 +107,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit to github" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit to github" />
+    <MESSAGE value="Added customer page base functionality." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added customer page base functionality." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
+          <line>187</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dreamteam_pizza_app$PizzaApp.ic" NAME="PizzaApp Coverage Results" MODIFIED="1668236694910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

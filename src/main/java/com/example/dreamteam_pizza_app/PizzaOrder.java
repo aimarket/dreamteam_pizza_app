@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class PizzaOrder {
     String pizzaType;
-    ArrayList<String> pizzaToppings;
+    private ArrayList<String> pizzaToppings = new ArrayList<String>();
     String pizzaPickupTime;
     String pizzaPickupTimeAmOrPm;
     String orderStatus = "";
@@ -12,18 +12,41 @@ public class PizzaOrder {
     public PizzaOrder(String pizzaType, ArrayList<String> toppings, String pickupTime, String amOrPm)
     {
         this.pizzaType = pizzaType;
-        this.pizzaToppings = toppings;
-        this.pizzaPickupTime = pickupTime;
-        this.pizzaPickupTimeAmOrPm = amOrPm;
-        this.orderStatus = "Ready to Cook";
+        for(int i = 0; i < toppings.size(); i++)
+        {
+            pizzaToppings.add(toppings.get(i));
+        }
+        pizzaPickupTime = pickupTime;
+        pizzaPickupTimeAmOrPm = amOrPm;
+        orderStatus = "Ready to Cook";
     }
-    boolean changeOrderStatus(){
-        return true;
+
+    public void changeOrderStatus(String newStatus)
+    {
+        orderStatus = newStatus;
     }
 
     public String getOrderStatus()
     {
         return orderStatus;
+    }
+    public String getPizzaPickupTime()
+    {
+        return pizzaPickupTime;
+    }
+    public String getPizzaPickupTimeAmOrPm()
+    {
+        return pizzaPickupTimeAmOrPm;
+    }
+
+    public ArrayList<String> getPizzaToppings()
+    {
+        return pizzaToppings;
+    }
+
+    public String getPizzaType()
+    {
+        return pizzaType;
     }
 
     String orderHistory(){

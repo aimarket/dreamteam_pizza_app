@@ -38,19 +38,19 @@
             </TextArea>
             <VBox prefHeight="342.0" prefWidth="277.0" style="-fx-background-color: #8C1D40;">
                <children>
-                  <Pane fx:id="pane_pizza_order" prefHeight="79.0" prefWidth="242.0" style="-fx-background-color: black; -fx-border-color: #FFC627;">
+                  <Pane fx:id="pane_pizza_order_one" prefHeight="79.0" prefWidth="242.0" style="-fx-background-color: black; -fx-border-color: #FFC627;">
                      <children>
                         <HBox prefHeight="79.0" prefWidth="242.0">
                            <children>
-                              <VBox fx:id="vbox_pizza_orders" prefHeight="79.0" prefWidth="116.0">
+                              <VBox fx:id="vbox_pizza_orders_one" prefHeight="79.0" prefWidth="116.0">
                                  <children>
-                                    <Label fx:id="label_order_status" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="117.0" text="status" textAlignment="RIGHT" textFill="#ffc627" />
-                                    <Label fx:id="label_order_customer_name" text="Customer Name" textFill="WHITE">
+                                    <Label fx:id="label_order_status_one" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="117.0" text="status" textAlignment="RIGHT" textFill="#ffc627" />
+                                    <Label fx:id="label_order_customer_name_one" text="Customer Name" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="label_order_pizza_type" text="-Type" textFill="WHITE">
+                                    <Label fx:id="label_order_pizza_type_one" text="-Type" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -59,13 +59,13 @@
                               </VBox>
                               <VBox prefHeight="200.0" prefWidth="100.0" translateX="10.0">
                                  <children>
-                                    <Label fx:id="label_order_time" text="time" textFill="WHITE" />
-                                    <Button fx:id="button_order_status_change" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: #8C1D40;" text="Change" textFill="WHITE">
+                                    <Label fx:id="label_order_time_one" text="time" textFill="WHITE" />
+                                    <Button fx:id="button_order_status_change_one" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: #8C1D40;" text="Change" textFill="WHITE">
                                        <font>
                                           <Font size="11.0" />
                                        </font>
                                     </Button>
-                                    <ComboBox fx:id="combobox_order_select_status" prefHeight="37.0" prefWidth="98.0" promptText="select" scaleY="0.9">
+                                    <ComboBox fx:id="combobox_order_select_status_one" prefHeight="37.0" prefWidth="98.0" promptText="select" scaleY="0.9">
                                        <padding>
                                           <Insets bottom="-5.0" right="-4.0" />
                                        </padding>
@@ -76,6 +76,126 @@
                         </HBox>
                      </children>
                   </Pane>
+                  <Pane fx:id="pane_pizza_order_two" prefHeight="79.0" prefWidth="242.0" style="-fx-background-color: black; -fx-border-color: #FFC627;">
+                     <children>
+                        <HBox prefHeight="79.0" prefWidth="242.0">
+                           <children>
+                              <VBox fx:id="vbox_pizza_orders_two" prefHeight="79.0" prefWidth="116.0">
+                                 <children>
+                                    <Label fx:id="label_order_status_two" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="117.0" text="status" textAlignment="RIGHT" textFill="#ffc627" />
+                                    <Label fx:id="label_order_customer_name_two" text="Customer Name" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="label_order_pizza_type_two" text="-Type" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" translateX="10.0">
+                                 <children>
+                                    <Label fx:id="label_order_time_two" text="time" textFill="WHITE" />
+                                    <Button fx:id="button_order_status_change_two" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: #8C1D40;" text="Change" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <ComboBox fx:id="combobox_order_select_status_two" prefHeight="37.0" prefWidth="98.0" promptText="select" scaleY="0.9">
+                                       <padding>
+                                          <Insets bottom="-5.0" right="-4.0" />
+                                       </padding>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_pizza_order_three" prefHeight="79.0" prefWidth="242.0" style="-fx-background-color: black; -fx-border-color: #FFC627;">
+                     <children>
+                        <HBox prefHeight="79.0" prefWidth="242.0">
+                           <children>
+                              <VBox fx:id="vbox_pizza_orders_three" prefHeight="79.0" prefWidth="116.0">
+                                 <children>
+                                    <Label fx:id="label_order_status_three" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="117.0" text="status" textAlignment="RIGHT" textFill="#ffc627" />
+                                    <Label fx:id="label_order_customer_name_three" text="Customer Name" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="label_order_pizza_type_three" text="-Type" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" translateX="10.0">
+                                 <children>
+                                    <Label fx:id="label_order_time_three" text="time" textFill="WHITE" />
+                                    <Button fx:id="button_order_status_change_three" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: #8C1D40;" text="Change" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <ComboBox fx:id="combobox_order_select_status_three" prefHeight="37.0" prefWidth="98.0" promptText="select" scaleY="0.9">
+                                       <padding>
+                                          <Insets bottom="-5.0" right="-4.0" />
+                                       </padding>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="pane_pizza_order_four" prefHeight="79.0" prefWidth="242.0" style="-fx-background-color: black; -fx-border-color: #FFC627;">
+                     <children>
+                        <HBox prefHeight="79.0" prefWidth="242.0">
+                           <children>
+                              <VBox fx:id="vbox_pizza_orders_four" prefHeight="79.0" prefWidth="116.0">
+                                 <children>
+                                    <Label fx:id="label_order_status_four" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="117.0" text="status" textAlignment="RIGHT" textFill="#ffc627" />
+                                    <Label fx:id="label_order_customer_name_four" text="Customer Name" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="label_order_pizza_type_four" text="-Type" textFill="WHITE">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" translateX="10.0">
+                                 <children>
+                                    <Label fx:id="label_order_time_four" text="time" textFill="WHITE" />
+                                    <Button fx:id="button_order_status_change_four" graphicTextGap="0.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="56.0" style="-fx-background-color: #8C1D40;" text="Change" textFill="WHITE">
+                                       <font>
+                                          <Font size="11.0" />
+                                       </font>
+                                    </Button>
+                                    <ComboBox fx:id="combobox_order_select_status_four" prefHeight="37.0" prefWidth="98.0" promptText="select" scaleY="0.9">
+                                       <padding>
+                                          <Insets bottom="-5.0" right="-4.0" />
+                                       </padding>
+                                    </ComboBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <HBox style="-fx-padding: 2 0 0 0;">
+                     <children>
+                        <Button fx:id="button_orders_left" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FFC627; -fx-translate-x: 10;" text="Previous" BorderPane.alignment="BOTTOM_LEFT" />
+                        <Button fx:id="button_orders_right" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #FFC627; -fx-translate-x: 50;" text="Next" BorderPane.alignment="BOTTOM_RIGHT"/>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
          </children>
