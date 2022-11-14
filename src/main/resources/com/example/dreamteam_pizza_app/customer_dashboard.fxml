@@ -11,7 +11,7 @@
    <children>
       <BorderPane prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #8C1D40;">
          <left>
-            <Label alignment="CENTER" prefHeight="25.0" prefWidth="80.0" text="Order Status:" textFill="WHITE" translateX="10.0" BorderPane.alignment="CENTER">
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="120.0" text="Order Status:" textFill="WHITE" translateX="10.0" BorderPane.alignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>

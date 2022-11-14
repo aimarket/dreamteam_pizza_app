@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="657a3db0-01a7-415b-832e-c8ac85de4895" name="Changes" comment="Fixed dash error with new orders">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CustomerFiles/OrderHistory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CustomerFiles/OrderHistory.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dreamteam_pizza_app/customer_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dreamteam_pizza_app/customer_dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
