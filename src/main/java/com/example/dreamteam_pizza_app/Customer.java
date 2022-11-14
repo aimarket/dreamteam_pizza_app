@@ -30,7 +30,10 @@ public class Customer {
         return true;
     }
 
-
+    public int getNumerOfOrders()
+    {
+        return pizzaOrderList.size();
+    }
 
     boolean validateStudentASU_ID(){
         if (asuID > 100000000 && asuID < 2147483646) {

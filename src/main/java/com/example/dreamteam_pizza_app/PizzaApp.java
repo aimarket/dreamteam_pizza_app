@@ -237,6 +237,7 @@ public class PizzaApp extends Application {
                             {
                                 updateOrderHistory(cheffController, "ORDER DELETED: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
                                 customerList.get(i).getPizzaOrderList().remove(j);
+                                outstandingOrders--;
                                 refreshOrderList(cheffController);
                                 break;
                             }
@@ -257,9 +258,10 @@ public class PizzaApp extends Application {
 
 
             for (int i = 0; i < customerList.size(); i++) {
-                for (int j = 0; j < customerList.get(i).getPizzaOrderList().size(); j++) {
+                for (int j = 0; j < customerList.get(i).getNumerOfOrders(); j++) {
                     if(currentIndex == targetIndex)
                     {
+                        customerList.get(i).getPizzaOrderList().get(j).changeOrderStatus((String) cheffController.combobox_order_select_status_two.getValue());
                         tempStatus = cheffController.combobox_order_select_status_two.getValue().toString();
                         if(tempStatus.equals("Delete"))
                         {
@@ -268,30 +270,26 @@ public class PizzaApp extends Application {
                             customerController.text_status.setText(tempStatus);
                         }
 
-                        if(outstandingOrders - 1 == currentIndex)
-                        {
+                        if(outstandingOrders - 1 == currentIndex) {
                             customerController.text_status.setText((String) cheffController.combobox_order_select_status_two.getValue());
-                            if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Ready to Cook")
-                            {
+                            if (customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Ready to Cook") {
                                 customerController.progressbar_status.setProgress(0.33);
                                 updateOrderHistory(cheffController, "READY TO COOK: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
-                            }
-                            else if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Cooking")
-                            {
+                            } else if (customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Cooking") {
                                 customerController.progressbar_status.setProgress(0.66);
                                 updateOrderHistory(cheffController, "COOKING: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
-                            }
-                            else if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Done")
-                            {
+                            } else if (customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Done") {
                                 customerController.progressbar_status.setProgress(1);
                                 updateOrderHistory(cheffController, "ORDER FINISHED AND EMAIL SENT: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
-                                System.out.println("Email sent to " + customerList.get(i).getAsuID()+"@asu.edu");
+                                System.out.println("Email sent to " + customerList.get(i).getAsuID() + "@asu.edu");
                             }
+
                         }
-                        if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete")
-                        {
+                        if (customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete") {
                             updateOrderHistory(cheffController, "ORDER DELETED: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
                             customerList.get(i).getPizzaOrderList().remove(j);
+                            outstandingOrders--;
+
                             refreshOrderList(cheffController);
                             break;
                         }
@@ -312,9 +310,10 @@ public class PizzaApp extends Application {
 
 
             for (int i = 0; i < customerList.size(); i++) {
-                for (int j = 0; j < customerList.get(i).getPizzaOrderList().size(); j++) {
+                for (int j = 0; j < customerList.get(i).getNumerOfOrders(); j++) {
                     if(currentIndex == targetIndex)
                     {
+                        customerList.get(i).getPizzaOrderList().get(j).changeOrderStatus((String) cheffController.combobox_order_select_status_three.getValue());
                         tempStatus = cheffController.combobox_order_select_status_three.getValue().toString();
                         if(tempStatus.equals("Delete"))
                         {
@@ -346,6 +345,7 @@ public class PizzaApp extends Application {
                         {
                             updateOrderHistory(cheffController, "ORDER DELETED: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
                             customerList.get(i).getPizzaOrderList().remove(j);
+                            outstandingOrders--;
                             refreshOrderList(cheffController);
                             break;
                         }
@@ -365,9 +365,10 @@ public class PizzaApp extends Application {
 
 
             for (int i = 0; i < customerList.size(); i++) {
-                for (int j = 0; j < customerList.get(i).getPizzaOrderList().size(); j++) {
+                for (int j = 0; j < customerList.get(i).getNumerOfOrders(); j++) {
                     if(currentIndex == targetIndex)
                     {
+                        customerList.get(i).getPizzaOrderList().get(j).changeOrderStatus((String) cheffController.combobox_order_select_status_four.getValue());
                         String tempStatus = cheffController.combobox_order_select_status_four.getValue().toString();
                         if(tempStatus.equals("Delete"))
                         {
@@ -399,6 +400,7 @@ public class PizzaApp extends Application {
                         {
                             updateOrderHistory(cheffController, "ORDER DELETED: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
                             customerList.get(i).getPizzaOrderList().remove(j);
+                            outstandingOrders--;
                             refreshOrderList(cheffController);
                             break;
                         }
