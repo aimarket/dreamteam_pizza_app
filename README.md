@@ -21,3 +21,9 @@ This pizza app is for the main project of CSE 360
 This part of the project is the customer facing portion.  When the customer opens the program they are presented with a concise and easy to consume screen to place their order.  They are first given the option of 3 different pizza types: pepperoni, vegetable, and cheese.  They then have the option of selecting 4 extra toppings: mushroom, olives, onion, and extra cheese.  After they are done customizing each pizza they want to purchase, the user clicks "Add to Order".  Their order is stored and showed in a text box to keep track of each pizza. Also, providing the ability to order and customize multiple pizzas with ease.  Under the order information section the student enters their ASU ID which is validated in the backend of our program and they also select a preferred pickup time. Once they are finished they click the "Place Order" button to finish the process.  The customer has the ability to enter their ID and check their order status which is displayed at the top of the GUI.  With simple design and thorough organization the student is provided with a seemless process to order delicious pies. 
 
 
+
+
+<p align="center">
+    <img src="https://github.com/aimarket/dreamteam_pizza_app/blob/main/README_assets/figure2_1.png" alt="CustomerGUI" title="CustomerGUI" width="450"/>
+</p>
+This part of the project is the staff facing portion. When the staff opens the progam they are presented with an screen which presents Order History on the left hand side as well as on the right hand side it is show which is either cooking and also ready to cook. 
