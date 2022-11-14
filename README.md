@@ -1,2 +1,2 @@
-# dreamteam_pizza_app
+# DREAM TEAM PIZZA
 This pizza app is for the main project of CSE 360
