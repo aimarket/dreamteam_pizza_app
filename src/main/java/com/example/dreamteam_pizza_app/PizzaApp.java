@@ -52,7 +52,6 @@ public class PizzaApp extends Application {
         CustomerDashboardController customerController = fxmlLoaderCustomer.getController();//this is the customerController
         CheffDashboardController cheffController = fxmlLoaderCheff.getController();//this is the cheff controller
 
-        customerController.testingChange();//this is the method in the customerController example only
 
         //#############################################################################################################
         int unfinishedOrders = 0;
@@ -73,6 +72,7 @@ public class PizzaApp extends Application {
         customerController.combobox_time.setItems(timeList);
         customerController.combobox_ampm.getItems().addAll("AM", "PM");
         //.setItems(amPmList);
+
 
         //Customer and staff scene toggle button
         customerController.button_customer.setOnAction(event ->
@@ -119,7 +119,13 @@ public class PizzaApp extends Application {
         customerController.button_placeorder.setOnAction(event ->
         {
             int existingCustomerMatchingPosition = -1;
-            int enteredID = Integer.parseInt(customerController.textfield_asurite.getText());
+            int enteredID = 0;
+            try {
+                enteredID = Integer.parseInt(customerController.textfield_asurite.getText());
+            }catch (NumberFormatException e){
+                customerController.textfield_asurite.setText("Invalid ID");
+            }
+
             for (int i = 0; i < customerList.size(); i++) {
                 if (customerList.get(i).getAsuID() == enteredID) {
                     existingCustomerMatchingPosition = i;
@@ -178,6 +184,7 @@ public class PizzaApp extends Application {
         //cheff actions
         //Customer and staff scene toggle button
 
+
         cheffController.button_staff.setOnAction(event ->
         {
 
@@ -190,6 +197,7 @@ public class PizzaApp extends Application {
                 cheffController.label_order_status_one.setText((String) cheffController.combobox_order_select_status_one.getValue());
             int targetIndex = currentOrderPage * 4;
             int currentIndex = 0;
+            String tempStatus;
 
 
             for (int i = 0; i < customerList.size(); i++) {
@@ -199,7 +207,15 @@ public class PizzaApp extends Application {
                             customerList.get(i).getPizzaOrderList().get(j).changeOrderStatus((String) cheffController.combobox_order_select_status_one.getValue());
                             if(outstandingOrders - 1 == currentIndex)
                             {
-                                customerController.text_status.setText((String) cheffController.combobox_order_select_status_one.getValue());
+
+                                tempStatus = cheffController.combobox_order_select_status_one.getValue().toString();
+                                if(tempStatus.equals("Delete"))
+                                {
+                                    customerController.text_status.setText("no order to display");
+                                }else {
+                                    customerController.text_status.setText(tempStatus);
+                                }
+
                                 if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Ready to Cook")
                                 {
                                     customerController.progressbar_status.setProgress(0.33);
@@ -214,6 +230,7 @@ public class PizzaApp extends Application {
                                 {
                                     customerController.progressbar_status.setProgress(1);
                                     updateOrderHistory(cheffController, "ORDER FINISHED AND EMAIL SENT: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
+                                    System.out.println("Email sent to " + customerList.get(i).getAsuID()+"@asu.edu");
                                 }
                             }
                             if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete")
@@ -236,13 +253,21 @@ public class PizzaApp extends Application {
             cheffController.label_order_status_two.setText((String) cheffController.combobox_order_select_status_two.getValue());
             int targetIndex = currentOrderPage * 4 + 1;
             int currentIndex = 0;
+            String tempStatus;
 
 
             for (int i = 0; i < customerList.size(); i++) {
                 for (int j = 0; j < customerList.get(i).getPizzaOrderList().size(); j++) {
                     if(currentIndex == targetIndex)
                     {
-                        customerList.get(i).getPizzaOrderList().get(j).changeOrderStatus((String) cheffController.combobox_order_select_status_two.getValue());
+                        tempStatus = cheffController.combobox_order_select_status_two.getValue().toString();
+                        if(tempStatus.equals("Delete"))
+                        {
+                            customerController.text_status.setText("no order to display");
+                        }else {
+                            customerController.text_status.setText(tempStatus);
+                        }
+
                         if(outstandingOrders - 1 == currentIndex)
                         {
                             customerController.text_status.setText((String) cheffController.combobox_order_select_status_two.getValue());
@@ -260,6 +285,7 @@ public class PizzaApp extends Application {
                             {
                                 customerController.progressbar_status.setProgress(1);
                                 updateOrderHistory(cheffController, "ORDER FINISHED AND EMAIL SENT: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
+                                System.out.println("Email sent to " + customerList.get(i).getAsuID()+"@asu.edu");
                             }
                         }
                         if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete")
@@ -282,13 +308,20 @@ public class PizzaApp extends Application {
             cheffController.label_order_status_three.setText((String) cheffController.combobox_order_select_status_three.getValue());
             int targetIndex = currentOrderPage * 4 + 2;
             int currentIndex = 0;
+            String tempStatus;
 
 
             for (int i = 0; i < customerList.size(); i++) {
                 for (int j = 0; j < customerList.get(i).getPizzaOrderList().size(); j++) {
                     if(currentIndex == targetIndex)
                     {
-                        customerList.get(i).getPizzaOrderList().get(j).changeOrderStatus((String) cheffController.combobox_order_select_status_three.getValue());
+                        tempStatus = cheffController.combobox_order_select_status_three.getValue().toString();
+                        if(tempStatus.equals("Delete"))
+                        {
+                            customerController.text_status.setText("no order to display");
+                        }else {
+                            customerController.text_status.setText(tempStatus);
+                        }
                         if(outstandingOrders - 1 == currentIndex)
                         {
                             customerController.text_status.setText((String) cheffController.combobox_order_select_status_three.getValue());
@@ -306,6 +339,7 @@ public class PizzaApp extends Application {
                             {
                                 customerController.progressbar_status.setProgress(1);
                                 updateOrderHistory(cheffController, "ORDER FINISHED AND EMAIL SENT: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
+                                System.out.println("Email sent to " + customerList.get(i).getAsuID()+"@asu.edu");
                             }
                         }
                         if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete")
@@ -334,7 +368,13 @@ public class PizzaApp extends Application {
                 for (int j = 0; j < customerList.get(i).getPizzaOrderList().size(); j++) {
                     if(currentIndex == targetIndex)
                     {
-                        customerList.get(i).getPizzaOrderList().get(j).changeOrderStatus((String) cheffController.combobox_order_select_status_four.getValue());
+                        String tempStatus = cheffController.combobox_order_select_status_four.getValue().toString();
+                        if(tempStatus.equals("Delete"))
+                        {
+                            customerController.text_status.setText("no order to display");
+                        }else {
+                            customerController.text_status.setText(tempStatus);
+                        }
                         if(outstandingOrders - 1 == currentIndex)
                         {
                             customerController.text_status.setText((String) cheffController.combobox_order_select_status_four.getValue());
@@ -352,6 +392,7 @@ public class PizzaApp extends Application {
                             {
                                 customerController.progressbar_status.setProgress(1);
                                 updateOrderHistory(cheffController, "ORDER FINISHED AND EMAIL SENT: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
+                                System.out.println("Email sent to " + customerList.get(i).getAsuID()+"@asu.edu");
                             }
                         }
                         if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete")

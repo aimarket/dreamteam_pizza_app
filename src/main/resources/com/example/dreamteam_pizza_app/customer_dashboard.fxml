@@ -11,9 +11,9 @@
    <children>
       <BorderPane prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #8C1D40;">
          <left>
-            <Label alignment="CENTER" prefHeight="25.0" prefWidth="97.0" text="Order Status:" textFill="WHITE" translateX="50.0" BorderPane.alignment="CENTER">
+            <Label alignment="CENTER" prefHeight="25.0" prefWidth="80.0" text="Order Status:" textFill="WHITE" translateX="10.0" BorderPane.alignment="CENTER">
                <font>
-                  <Font size="16.0" />
+                  <Font size="14.0" />
                </font>
             </Label>
          </left>
@@ -21,14 +21,14 @@
             <Button fx:id="button_customer" mnemonicParsing="false" style="-fx-background-color: #FFC627; -fx-translate-x: -10;" text="Customer" BorderPane.alignment="CENTER"  />
          </right>
          <center>
-            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER" prefHeight="45.0" prefWidth="350.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="text_status" prefHeight="25.0" prefWidth="80.0" text="STATUS" textFill="WHITE">
+                  <Label fx:id="text_status" prefHeight="25.0" prefWidth="225.0" text="No Orders Yet" textFill="WHITE">
                      <font>
-                        <Font size="16.0" />
+                        <Font size="14.0" />
                      </font>
                   </Label>
-                  <ProgressBar fx:id="progressbar_status" prefHeight="9.0" prefWidth="200.0" progress="0.27" />
+                  <ProgressBar fx:id="progressbar_status" prefHeight="9.0" prefWidth="150.0" progress="0.0" />
                </children>
             </HBox>
          </center>

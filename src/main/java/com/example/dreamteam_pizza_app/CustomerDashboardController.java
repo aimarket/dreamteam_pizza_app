@@ -41,9 +41,4 @@ public class CustomerDashboardController {
     @FXML
     public ComboBox combobox_ampm;
 
-    @FXML
-    public void testingChange() {
-        text_status.setText("cooking");
-    }
-
 }
