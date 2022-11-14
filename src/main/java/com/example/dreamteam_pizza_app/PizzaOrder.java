@@ -50,20 +50,4 @@ public class PizzaOrder {
         return pizzaType;
     }
 
-    String orderHistory(){
-        return "";
-    }
-
-    boolean orderCompletion(){
-        return true;
-    }
-
-    String emailDelivery(){
-        return "";
-    }
-
-    boolean orderDeletion(){
-        return true;
-    }
-
 }

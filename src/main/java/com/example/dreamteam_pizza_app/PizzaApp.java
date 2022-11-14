@@ -24,8 +24,6 @@ public class PizzaApp extends Application {
     String currentPizzaType = "";
     ArrayList<String> toppings = new ArrayList<String>();
 
-
-
     int outstandingOrders = 0;
     int currentOrderPage = 0;
 
@@ -62,6 +60,7 @@ public class PizzaApp extends Application {
         customerController.rbutton_cheese.setToggleGroup(pizzaTypeGroup);
         customerController.rbutton_Vegetable.setToggleGroup(pizzaTypeGroup);
 
+        //Adds time options
         ObservableList<String> timeList = FXCollections.observableArrayList();
         Collections.addAll(timeList, "12:00", "12:30", "1:00", "1:30", "2:00", "2:30", "3:00", "3:30", "4:00", "4:30", "5:00",
                 "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30");
@@ -155,6 +154,7 @@ public class PizzaApp extends Application {
             }
         });
 
+        //Customer checks order status
         customerController.button_status.setOnAction(event ->
         {
             int existingCustomerMatchingPosition = -1;
@@ -182,9 +182,21 @@ public class PizzaApp extends Application {
 
         //#########################################################################################################
         //cheff actions
+        ObservableList<String> statusList = FXCollections.observableArrayList();
+        Collections.addAll(statusList, "Ready to Cook", "Cooking", "Done", "Delete");
+
+        cheffController.pane_pizza_order_one.setVisible(false);
+        cheffController.pane_pizza_order_two.setVisible(false);
+        cheffController.pane_pizza_order_three.setVisible(false);
+        cheffController.pane_pizza_order_four.setVisible(false);
+
+        cheffController.combobox_order_select_status_one.setItems(statusList);
+        cheffController.combobox_order_select_status_two.setItems(statusList);
+        cheffController.combobox_order_select_status_three.setItems(statusList);
+        cheffController.combobox_order_select_status_four.setItems(statusList);
+
+
         //Customer and staff scene toggle button
-
-
         cheffController.button_staff.setOnAction(event ->
         {
 
@@ -192,6 +204,7 @@ public class PizzaApp extends Application {
             primaryStage.show();
         });
 
+        //Cheff changes order status button 1
         cheffController.button_order_status_change_one.setOnAction(event ->
         {
                 cheffController.label_order_status_one.setText((String) cheffController.combobox_order_select_status_one.getValue());
@@ -205,8 +218,6 @@ public class PizzaApp extends Application {
                         if(currentIndex == targetIndex)
                         {
                             customerList.get(i).getPizzaOrderList().get(j).changeOrderStatus((String) cheffController.combobox_order_select_status_one.getValue());
-                            if(outstandingOrders - 1 == currentIndex)
-                            {
 
                                 tempStatus = cheffController.combobox_order_select_status_one.getValue().toString();
                                 if(tempStatus.equals("Delete"))
@@ -241,7 +252,6 @@ public class PizzaApp extends Application {
                                 refreshOrderList(cheffController);
                                 break;
                             }
-                        }
                         currentIndex++;
 
                     }
@@ -249,6 +259,7 @@ public class PizzaApp extends Application {
 
         });
 
+        //Cheff changes order status button 2
         cheffController.button_order_status_change_two.setOnAction(event ->
         {
             cheffController.label_order_status_two.setText((String) cheffController.combobox_order_select_status_two.getValue());
@@ -270,7 +281,6 @@ public class PizzaApp extends Application {
                             customerController.text_status.setText(tempStatus);
                         }
 
-                        if(outstandingOrders - 1 == currentIndex) {
                             customerController.text_status.setText((String) cheffController.combobox_order_select_status_two.getValue());
                             if (customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Ready to Cook") {
                                 customerController.progressbar_status.setProgress(0.33);
@@ -284,7 +294,6 @@ public class PizzaApp extends Application {
                                 System.out.println("Email sent to " + customerList.get(i).getAsuID() + "@asu.edu");
                             }
 
-                        }
                         if (customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete") {
                             updateOrderHistory(cheffController, "ORDER DELETED: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
                             customerList.get(i).getPizzaOrderList().remove(j);
@@ -301,6 +310,7 @@ public class PizzaApp extends Application {
 
         });
 
+        //Cheff changes order status button 3
         cheffController.button_order_status_change_three.setOnAction(event ->
         {
             cheffController.label_order_status_three.setText((String) cheffController.combobox_order_select_status_three.getValue());
@@ -321,8 +331,6 @@ public class PizzaApp extends Application {
                         }else {
                             customerController.text_status.setText(tempStatus);
                         }
-                        if(outstandingOrders - 1 == currentIndex)
-                        {
                             customerController.text_status.setText((String) cheffController.combobox_order_select_status_three.getValue());
                             if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Ready to Cook")
                             {
@@ -340,7 +348,6 @@ public class PizzaApp extends Application {
                                 updateOrderHistory(cheffController, "ORDER FINISHED AND EMAIL SENT: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
                                 System.out.println("Email sent to " + customerList.get(i).getAsuID()+"@asu.edu");
                             }
-                        }
                         if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete")
                         {
                             updateOrderHistory(cheffController, "ORDER DELETED: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
@@ -357,6 +364,7 @@ public class PizzaApp extends Application {
 
         });
 
+        //Cheff changes order status button 4
         cheffController.button_order_status_change_four.setOnAction(event ->
         {
             cheffController.label_order_status_four.setText((String) cheffController.combobox_order_select_status_four.getValue());
@@ -376,8 +384,6 @@ public class PizzaApp extends Application {
                         }else {
                             customerController.text_status.setText(tempStatus);
                         }
-                        if(outstandingOrders - 1 == currentIndex)
-                        {
                             customerController.text_status.setText((String) cheffController.combobox_order_select_status_four.getValue());
                             if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Ready to Cook")
                             {
@@ -395,7 +401,6 @@ public class PizzaApp extends Application {
                                 updateOrderHistory(cheffController, "ORDER FINISHED AND EMAIL SENT: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
                                 System.out.println("Email sent to " + customerList.get(i).getAsuID()+"@asu.edu");
                             }
-                        }
                         if(customerList.get(i).getPizzaOrderList().get(j).getOrderStatus() == "Delete")
                         {
                             updateOrderHistory(cheffController, "ORDER DELETED: " + customerList.get(i).getAsuID() + " - " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTime() + " " + customerList.get(i).getPizzaOrderList().get(j).getPizzaPickupTimeAmOrPm());
@@ -413,20 +418,7 @@ public class PizzaApp extends Application {
         });
 
 
-        //Staff GUI
-        ObservableList<String> statusList = FXCollections.observableArrayList();
-        Collections.addAll(statusList, "Ready to Cook", "Cooking", "Done", "Delete");
-
-        cheffController.pane_pizza_order_one.setVisible(false);
-        cheffController.pane_pizza_order_two.setVisible(false);
-        cheffController.pane_pizza_order_three.setVisible(false);
-        cheffController.pane_pizza_order_four.setVisible(false);
-
-        cheffController.combobox_order_select_status_one.setItems(statusList);
-        cheffController.combobox_order_select_status_two.setItems(statusList);
-        cheffController.combobox_order_select_status_three.setItems(statusList);
-        cheffController.combobox_order_select_status_four.setItems(statusList);
-
+        //Cheff checks orders to the left side of screen
         cheffController.button_orders_left.setOnAction(event ->
         {
             if(currentOrderPage > 0)
@@ -435,7 +427,7 @@ public class PizzaApp extends Application {
                 refreshOrderList(cheffController);
             }
         });
-
+        //Cheff checks orders to the right side of screen
         cheffController.button_orders_right.setOnAction(event ->
         {
             if(currentOrderPage * 4 < outstandingOrders)
@@ -448,7 +440,7 @@ public class PizzaApp extends Application {
 
     }
 
-
+    // refreshes order list every time an order is deleted or added for the staff gui
     private void refreshOrderList(CheffDashboardController cheffController) {
 
         countOutstandingOrders();
@@ -506,6 +498,7 @@ public class PizzaApp extends Application {
         }
     }
 
+    //Helper method to refreshOrderList() that counts the number of outstanding orders
     private void countOutstandingOrders() {
         outstandingOrders = 0;
         for (int i = 0; i < customerList.size(); i++) {
@@ -530,6 +523,7 @@ public class PizzaApp extends Application {
         }
     }
 
+    //returns the abbreviated order string given a pizzaOrder
     private String getOrderAbbreviation(PizzaOrder pizzaOrder)
     {
         String orderAbreviation = "";
@@ -568,6 +562,7 @@ public class PizzaApp extends Application {
         return orderAbreviation;
     }
 
+    //Updates the orderhistory pane and stores it in the OrderHistory.txt file.
     private void updateOrderHistory(CheffDashboardController cheffController, String addLine) {
         orderHistory += "\n" + addLine;
         try {

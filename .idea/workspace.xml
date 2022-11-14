@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="657a3db0-01a7-415b-832e-c8ac85de4895" name="Changes" comment="Fixed dash error with new orders">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dreamteam_pizza_app/customer_dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dreamteam_pizza_app/customer_dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/ChefGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CustomerFiles/OrderHistory.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CustomerFiles/OrderHistory.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/CustomerGUI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaOrder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,72 +118,6 @@
     <MESSAGE value="Added customer page base functionality." />
     <MESSAGE value="Added staff backend functionality." />
     <option name="LAST_COMMIT_MESSAGE" value="Added staff backend functionality." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>253</line>
-          <option name="timeStamp" value="78" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>260</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>261</line>
-          <option name="timeStamp" value="80" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>263</line>
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>264</line>
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>265</line>
-          <option name="timeStamp" value="87" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>274</line>
-          <option name="timeStamp" value="89" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>277</line>
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>276</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>275</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>280</line>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/dreamteam_pizza_app/PizzaApp.java</url>
-          <line>279</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dreamteam_pizza_app$PizzaApp.ic" NAME="PizzaApp Coverage Results" MODIFIED="1668236694910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
