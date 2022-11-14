@@ -7,7 +7,7 @@ The Dream Team is ASU's CSE360's finest. Elite coders making the most advanced J
 
 # GROUP MEMBERS
 
-# Luke Klusty | Brandon Winslow | Ali Eman | Alex Torres | Chris Stone
+ Luke Klusty | Brandon Winslow | Ali Eman | Alex Torres | Chris Stone
 
 This pizza app is for the main project of CSE 360
 
